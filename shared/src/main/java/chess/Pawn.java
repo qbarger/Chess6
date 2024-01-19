@@ -22,39 +22,83 @@ public class Pawn {
       if(row == 2){
         i = row + 1;
         j = col;
+        /* one space */
         new_position = new ChessPosition(i,j);
+        ChessPiece pieceCheck = board.getPiece(new_position);
+        if(pieceCheck == null) {
+          move=new ChessMove(position, new_position, null);
+          moveList.add(move);
+        }
+        else {
+          /* invalid move */
+        }
+
+        /* two spaces */
         new_position2 = new ChessPosition(i + 1,j);
-        move = new ChessMove(position,new_position,null);
-        move2 = new ChessMove(position,new_position2,null);
-        moveList.add(move);
-        moveList.add(move2);
+        ChessPiece pieceCheck2 = board.getPiece(new_position2);
+        if(pieceCheck2 == null && pieceCheck == null) {
+          move2=new ChessMove(position, new_position2, null);
+          moveList.add(move2);
+        }
+        else {
+          /* invalid move */
+        }
       }
       else {
         i = row + 1;
         j = col;
         new_position = new ChessPosition(i,j);
-        move = new ChessMove(position,new_position,null);
-        moveList.add(move);
+        ChessPiece pieceCheck = board.getPiece(new_position);
+        if(pieceCheck == null) {
+          move=new ChessMove(position, new_position, null);
+          moveList.add(move);
+        }
+        else {
+          /* Invalid move */
+        }
       }
 
     }
+
+    /* Pawn is black */
     else {
       if(row == 7){
         i = row - 1;
         j = col;
+        /* one space */
         new_position = new ChessPosition(i,j);
+        ChessPiece pieceCheck = board.getPiece(new_position);
+        if(pieceCheck == null) {
+          move=new ChessMove(position, new_position, null);
+          moveList.add(move);
+        }
+        else {
+          /* invalid move */
+        }
+
+        /* two spaces */
         new_position2 = new ChessPosition(i - 1,j);
-        move = new ChessMove(position,new_position,null);
-        move2 = new ChessMove(position,new_position2,null);
-        moveList.add(move);
-        moveList.add(move2);
+        ChessPiece pieceCheck2 = board.getPiece(new_position2);
+        if(pieceCheck2 == null && pieceCheck == null) {
+          move2=new ChessMove(position, new_position2, null);
+          moveList.add(move2);
+        }
+        else {
+          /* invalid move */
+        }
       }
       else {
         i = row - 1;
         j = col;
         new_position = new ChessPosition(i,j);
-        move = new ChessMove(position,new_position,null);
-        moveList.add(move);
+        ChessPiece pieceCheck = board.getPiece(new_position);
+        if(pieceCheck == null) {
+          move=new ChessMove(position, new_position, null);
+          moveList.add(move);
+        }
+        else {
+          /* invalid move */
+        }
       }
     }
     return moveList;
