@@ -68,6 +68,9 @@ public class ChessPiece {
         if (pieceType == PieceType.ROOK){
             setOfMoves = piece.RookMoveCalculator(myPosition, board);
         }
+        if (pieceType == PieceType.QUEEN){
+            setOfMoves = piece.QueenMoveCalculator(myPosition, board);
+        }
         return setOfMoves;
     }
 

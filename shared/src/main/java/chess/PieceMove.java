@@ -10,6 +10,7 @@ public class PieceMove {
   private King king;
   private Knight knight;
   private Rook rook;
+  private Queen queen;
 
   public PieceMove(ChessPiece.PieceType pieceType){
     this.pieceType = pieceType;
@@ -17,6 +18,7 @@ public class PieceMove {
     this.king = new King();
     this.knight = new Knight();
     this.rook = new Rook();
+    this.queen = new Queen();
   }
 
   public ArrayList<ChessMove> BishopMoveCalculator(ChessPosition position, ChessBoard board){
@@ -41,6 +43,12 @@ public class PieceMove {
     ArrayList<ChessMove> rookMoves = new ArrayList<>();
     rookMoves = rook.GetRookMoves(position,board);
     return rookMoves;
+  }
+
+  public ArrayList<ChessMove> QueenMoveCalculator(ChessPosition position, ChessBoard board){
+    ArrayList<ChessMove> queenMoves = new ArrayList<>();
+    queenMoves = queen.GetQueenMoves(position,board);
+    return queenMoves;
   }
 
 }
