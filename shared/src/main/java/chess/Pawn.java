@@ -18,6 +18,7 @@ public class Pawn {
     int j = 0;
 
     /* Determine which color the pawn is */
+    /* Pawn is White */
     if(curr_piece.getTeamColor() == ChessGame.TeamColor.WHITE){
       if(row == 2){
         i = row + 1;
@@ -50,8 +51,20 @@ public class Pawn {
         new_position = new ChessPosition(i,j);
         ChessPiece pieceCheck = board.getPiece(new_position);
         if(pieceCheck == null) {
-          move=new ChessMove(position, new_position, null);
-          moveList.add(move);
+          if(i == 8) {
+            move=new ChessMove(position, new_position, ChessPiece.PieceType.BISHOP);
+            moveList.add(move);
+            move=new ChessMove(position, new_position, ChessPiece.PieceType.KNIGHT);
+            moveList.add(move);
+            move=new ChessMove(position, new_position, ChessPiece.PieceType.ROOK);
+            moveList.add(move);
+            move=new ChessMove(position, new_position, ChessPiece.PieceType.QUEEN);
+            moveList.add(move);
+          }
+          else {
+            move=new ChessMove(position, new_position, null);
+            moveList.add(move);
+          }
         }
         else {
           /* Invalid move */
@@ -93,8 +106,20 @@ public class Pawn {
         new_position = new ChessPosition(i,j);
         ChessPiece pieceCheck = board.getPiece(new_position);
         if(pieceCheck == null) {
-          move=new ChessMove(position, new_position, null);
-          moveList.add(move);
+          if(i == 1) {
+            move=new ChessMove(position, new_position, ChessPiece.PieceType.ROOK);
+            moveList.add(move);
+            move=new ChessMove(position, new_position, ChessPiece.PieceType.KNIGHT);
+            moveList.add(move);
+            move=new ChessMove(position, new_position, ChessPiece.PieceType.BISHOP);
+            moveList.add(move);
+            move=new ChessMove(position, new_position, ChessPiece.PieceType.QUEEN);
+            moveList.add(move);
+          }
+          else {
+            move=new ChessMove(position, new_position, null);
+            moveList.add(move);
+          }
         }
         else {
           /* invalid move */
