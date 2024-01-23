@@ -69,8 +69,57 @@ public class Pawn {
         else {
           /* Invalid move */
         }
-      }
 
+        /* Capture */
+        new_position=new ChessPosition(i, j + 1);
+        pieceCheck=board.getPiece(new_position);
+        if (pieceCheck == null) {
+            /* Do nothing */
+        } else {
+          if (pieceCheck.getTeamColor() != curr_piece.getTeamColor()) {
+            if (i == 8) {
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.BISHOP);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.KNIGHT);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.ROOK);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.QUEEN);
+              moveList.add(move);
+            } else {
+              move=new ChessMove(position, new_position, null);
+              moveList.add(move);
+            }
+          }
+          else {
+            /* Invalid move */
+          }
+        }
+        new_position = new ChessPosition(i,j - 1);
+        pieceCheck=board.getPiece(new_position);
+        if (pieceCheck == null) {
+            /* Do nothing */
+        } else {
+          if(pieceCheck.getTeamColor() != curr_piece.getTeamColor()) {
+            if (i == 8) {
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.BISHOP);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.KNIGHT);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.ROOK);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.QUEEN);
+              moveList.add(move);
+            } else {
+              move=new ChessMove(position, new_position, null);
+              moveList.add(move);
+            }
+          }
+          else {
+            /* invalid move */
+          }
+        }
+      }
     }
 
     /* Pawn is black */
@@ -123,6 +172,56 @@ public class Pawn {
         }
         else {
           /* invalid move */
+        }
+
+        /* Capture */
+        new_position=new ChessPosition(i, j + 1);
+        pieceCheck=board.getPiece(new_position);
+        if (pieceCheck == null) {
+          /* Do nothing */
+        } else {
+          if (pieceCheck.getTeamColor() != curr_piece.getTeamColor()) {
+            if (i == 1) {
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.BISHOP);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.KNIGHT);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.ROOK);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.QUEEN);
+              moveList.add(move);
+            } else {
+              move=new ChessMove(position, new_position, null);
+              moveList.add(move);
+            }
+          }
+          else {
+            /* invalid move */
+          }
+        }
+        new_position = new ChessPosition(i,j - 1);
+        pieceCheck=board.getPiece(new_position);
+        if (pieceCheck == null) {
+          /* Do nothing */
+        } else {
+          if(pieceCheck.getTeamColor() != curr_piece.getTeamColor()) {
+            if (i == 1) {
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.BISHOP);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.KNIGHT);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.ROOK);
+              moveList.add(move);
+              move=new ChessMove(position, new_position, ChessPiece.PieceType.QUEEN);
+              moveList.add(move);
+            } else {
+              move=new ChessMove(position, new_position, null);
+              moveList.add(move);
+            }
+          }
+          else {
+            /* invalid move */
+          }
         }
       }
     }
