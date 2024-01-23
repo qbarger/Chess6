@@ -1,6 +1,7 @@
 package chess;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -78,10 +79,17 @@ public class ChessPiece {
     }
 
     @Override
+    public String toString() {
+        return "ChessPiece{" + "pieceColor=" + pieceColor + ", pieceType=" + pieceType + ", piece=" + piece + '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof ChessPiece that)) return false;
-        return pieceColor == that.pieceColor && pieceType == that.pieceType && Objects.equals(piece, that.piece);
+        if (o == null){return false;}
+        if (getClass() != o.getClass()){return false;}
+        ChessPiece other = (ChessPiece) o;
+        return pieceColor == other.pieceColor && pieceType == other.pieceType;
     }
 
     @Override
