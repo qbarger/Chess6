@@ -30,9 +30,6 @@ public class Knight {
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
         }
-        else {
-          /* Invalid move */
-        }
       }
     }
 
@@ -50,9 +47,6 @@ public class Knight {
         if(pieceCheck.getTeamColor() != curr_piece.getTeamColor()){
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
-        }
-        else {
-          /* Invalid move */
         }
       }
     }
@@ -72,9 +66,6 @@ public class Knight {
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
         }
-        else {
-          /* Invalid move */
-        }
       }
     }
 
@@ -92,9 +83,6 @@ public class Knight {
         if(pieceCheck.getTeamColor() != curr_piece.getTeamColor()){
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
-        }
-        else {
-          /* Invalid move */
         }
       }
     }
@@ -114,9 +102,6 @@ public class Knight {
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
         }
-        else {
-          /* Invalid move */
-        }
       }
     }
 
@@ -134,9 +119,6 @@ public class Knight {
         if(pieceCheck.getTeamColor() != curr_piece.getTeamColor()){
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
-        }
-        else {
-          /* Invalid move */
         }
       }
     }
@@ -156,9 +138,6 @@ public class Knight {
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
         }
-        else {
-          /* Invalid move */
-        }
       }
     }
 
@@ -176,9 +155,6 @@ public class Knight {
         if(pieceCheck.getTeamColor() != curr_piece.getTeamColor()){
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
-        }
-        else {
-          /* Invalid move */
         }
       }
     }

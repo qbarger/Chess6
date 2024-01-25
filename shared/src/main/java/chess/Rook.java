@@ -7,7 +7,7 @@ public class Rook {
   private ChessPosition new_position;
   private ChessMove move;
 
-  public ArrayList<ChessMove> GetRookMoves(ChessPosition position, ChessBoard board){
+  public ArrayList<ChessMove> GetRookMoves(ChessBoard board, ChessPosition position){
     ArrayList<ChessMove> moveList = new ArrayList<>();
     ChessPiece curr_piece = board.getPiece(position);
     int row = position.getRow();

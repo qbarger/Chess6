@@ -31,9 +31,6 @@ public class King {
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
         }
-        else {
-          /* move invalid */
-        }
       }
     }
 
@@ -53,9 +50,6 @@ public class King {
           new_position=new ChessPosition(i, j);
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
-        }
-        else {
-          /* move invalid */
         }
       }
     }
@@ -77,9 +71,6 @@ public class King {
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
         }
-        else {
-          /* move invalid */
-        }
       }
     }
 
@@ -99,9 +90,6 @@ public class King {
           new_position=new ChessPosition(i, j);
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
-        }
-        else {
-          /* move invalid */
         }
       }
     }
@@ -123,9 +111,6 @@ public class King {
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
         }
-        else {
-          /* move invalid */
-        }
       }
     }
 
@@ -145,9 +130,6 @@ public class King {
           new_position=new ChessPosition(i, j);
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
-        }
-        else {
-          /* move invalid */
         }
       }
     }
@@ -169,9 +151,6 @@ public class King {
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
         }
-        else {
-          /* move invalid */
-        }
       }
     }
 
@@ -191,9 +170,6 @@ public class King {
           new_position=new ChessPosition(i, j);
           move=new ChessMove(position, new_position, null);
           moveList.add(move);
-        }
-        else {
-          /* move invalid */
         }
       }
     }
